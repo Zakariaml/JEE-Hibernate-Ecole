@@ -60,8 +60,9 @@
 					<td> ${e.prenom_eleve } </td>
 					<td> 	
 			<a class="btn btn-outline-secondary" href="EleveUpdate.php?action=update&ref=${e.cne_eleve}"> Modifier</a> | 
-			<a class="btn btn-outline-danger" href="EleveDelete.php?action=delete&ref=${e.cne_eleve}" 
-			onclick="if (!(confirm('Are you sure you want to delete this module ?'))) return false">Supprimer</a>
+					<a class="btn btn-outline-danger" href="EleveDelete.php?action=delete&ref=${e.cne_eleve}" 
+			onclick="if (!(confirm('Lorsque vous supprimez un élève, toutes les notes qui sont attachées à cet élève seront aussi supprimés! Continuer ?'))) return false">
+			Supprimer</a>
 			  		</td>
 				</tr>
 			</c:forEach>

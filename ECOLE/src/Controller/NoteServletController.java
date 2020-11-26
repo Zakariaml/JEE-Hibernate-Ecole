@@ -84,6 +84,9 @@ public class NoteServletController extends HttpServlet{
 				request.setAttribute("moduleName", model.getModule(IdModule));
 				//get the list of notes for specific module by his reference "IdModule"
 				request.setAttribute("notes",model.getListForSpecificModule(IdModule));
+				
+				String ConfirmSuccess ="updated";
+				request.setAttribute("ConfirmSuccess", ConfirmSuccess);
 				request.getRequestDispatcher("Views/NoteShow.jsp").forward(request, response);
 			}
 			else if(action.equalsIgnoreCase("ParRapportModule")){
@@ -150,6 +153,9 @@ public class NoteServletController extends HttpServlet{
 				
 				//get the list of notes for specific eleve by his reference "CneEleve"
 				request.setAttribute("notes",model.getListForSpecificEleve(CneEleve));
+				
+				String ConfirmSuccess ="updated";
+				request.setAttribute("ConfirmSuccess", ConfirmSuccess);
 				request.getRequestDispatcher("Views/NoteShowForEleve.jsp").forward(request, response);
 				
 			}

@@ -56,7 +56,7 @@
 					<td> 	
 			<a class="btn btn-outline-secondary" href="ModuleUpdate.aspx?action=update&ref=${m.module_id}"> Modifier</a> | 
 			<a class="btn btn-outline-danger" href="ModuleDelete.aspx?action=delete&ref=${m.module_id}" 
-			onclick="if (!(confirm('Are you sure you want to delete this module ?'))) return false">Supprimer</a>
+			onclick="if (!(confirm('Lorsque vous supprimez un modules, toutes les notes qui sont attachées à cet module seront aussi supprimés! Continuer ?'))) return false">Supprimer</a>
 			  		</td>
 				</tr>
 			</c:forEach>

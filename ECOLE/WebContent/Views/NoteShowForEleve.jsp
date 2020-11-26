@@ -28,12 +28,7 @@
          	 <c:choose>
 			<c:when test="${ConfirmSuccess =='updated' }">
 				<div id="hideit" class="alert alert-success" role="alert">
-  					Le module bien modifié!
-				</div>
-			</c:when>
-			<c:when test="${ConfirmSuccess =='added' }">
-				<div id="hideit" class="alert alert-success" role="alert">
-  					Le module bien ajouté!
+  					Les notes bien modifié!
 				</div>
 			</c:when>
 			</c:choose>
@@ -72,6 +67,12 @@
 
 
 </body>
-
+<script type="text/javascript">
+		$(document).ready(function () {
+            setTimeout(function () {
+                $('#hideit').fadeOut();
+            }, 4000);
+        });
+	</script>
 </body>
 </html>

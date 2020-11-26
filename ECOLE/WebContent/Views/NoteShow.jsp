@@ -24,18 +24,11 @@
          	<p class="lead text-muted">La note O, représente une note null! La note 1 représente que l'élève ABS
          </p>
           <p>
-         	 <c:choose>
-			<c:when test="${ConfirmSuccess =='updated' }">
-				<div id="hideit" class="alert alert-success" role="alert">
-  					Le module bien modifié!
+         	  <c:if test="${ConfirmSuccess =='updated' }">
+         	  	<div id="hideit" class="alert alert-success" role="alert">
+  					Les notes bien modifié!
 				</div>
-			</c:when>
-			<c:when test="${ConfirmSuccess =='added' }">
-				<div id="hideit" class="alert alert-success" role="alert">
-  					Le module bien ajouté!
-				</div>
-			</c:when>
-			</c:choose>
+         	  </c:if>
 			<a href="NoteUpdate.html?action=updateNoteForModule&ref=${moduleName.module_id}" class="btn btn-primary my-2">
 			Modifier les notes 
 			</a>
@@ -67,7 +60,14 @@
 <br><br>
 <%@ include file="footer.html" %>
 
-
-
 </body>
+
+<script type="text/javascript">
+		$(document).ready(function () {
+            setTimeout(function () {
+                $('#hideit').fadeOut();
+            }, 4000);
+        });
+	</script>
+
 </html>
